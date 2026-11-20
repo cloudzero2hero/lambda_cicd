@@ -4,7 +4,7 @@ name: Deploy AWS Lambda
 on:
   push: 
     branches:
-      - main:
+      - main
     paths:
       - 'lambda/*'
 jobs:
@@ -26,12 +26,12 @@ jobs:
     - name: Configure AWS creds
       uses: aws-actions/configure-aws-credentials@v1
       with:
-        aws-action-key-id: ${{ secrets.AWS_ACCESS_KEY_ID}}
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID}}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
         aws-region: eu-west-2
 
     - name: Deploy Lambda Function
       run: |
         cd lambda
-        zip -r lambda.zip
+        zip -r lambda.zip .
         aws lambda update-function-code --function-name my-test-cicd-lambda --zip-file fileb://lambda.zip
