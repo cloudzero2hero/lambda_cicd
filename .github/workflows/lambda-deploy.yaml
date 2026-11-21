@@ -6,7 +6,7 @@ on:
     branches:
       - main
     paths:
-      - 'lambda/**'
+  workflow_dispatch:
 jobs:
   deploy-lambda:
     runs-on: ubuntu-latest
@@ -26,8 +26,8 @@ jobs:
     - name: Configure AWS creds
       uses: aws-actions/configure-aws-credentials@v1
       with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID}}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID}}
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID }}
         aws-region: eu-west-2
 
     - name: Deploy Lambda Function
