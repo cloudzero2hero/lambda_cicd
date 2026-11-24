@@ -2,7 +2,7 @@ AWSTemplateFormatVersion: '2010-09-09'
 Description: 'S3 Bucket for our CICD PR'
 
 Parameters:
-  Enviroment: 
+  Environment: 
     Type: String
     Default: test
     AllowedValues: 
