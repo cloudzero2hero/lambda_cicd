@@ -5,7 +5,7 @@ Parameters:
   Enviroment: 
     Type: String
     Default: test
-    Allowed Values: 
+    AllowedValues: 
       - test
       - staging
       - production
@@ -23,5 +23,5 @@ Resources:
 
   Outputs:
     BucketName:
-      Description: 'Name of creayred s3 bucket'
-      Value: !Ref MyS3bucket
+      Description: 'Name of created s3 bucket'
+      Value: !Ref MyS3Bucket
