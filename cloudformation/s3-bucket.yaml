@@ -11,7 +11,7 @@ Parameters:
       - production
 
 Resources:
-  MyS3Bucket-CICD:
+  MyS3BucketCICD:
     Type: 'AWS::S3::Bucket'
     Properties:
       BucketName: !Sub '${AWS::StackName}-${Environment}-bucket'
@@ -24,4 +24,4 @@ Resources:
 Outputs:
   BucketName:
     Description: 'Name of created s3 bucket'
-    Value: !Ref MyS3Bucket-CICD
+    Value: !Ref MyS3BucketCICD
