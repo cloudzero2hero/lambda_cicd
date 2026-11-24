@@ -11,10 +11,10 @@ Parameters:
       - production
 
 Resources:
-  CeaS3BucketCICD:
+  S3Bucket:
     Type: 'AWS::S3::Bucket'
     Properties:
-      BucketName: !Sub '${AWS::StackName}-${Environment}-bucket'
+      BucketName: !Sub 'cea-${AWS::StackName}-${Environment}-bucket'
       Tags:
         - Key: Environment
           Value: !Ref Environment
@@ -24,4 +24,4 @@ Resources:
 Outputs:
   BucketName:
     Description: 'Name of created s3 bucket'
-    Value: !Ref CeaS3BucketCICD
+    Value: !Ref S3Bucket
