@@ -1,11 +1,11 @@
-name: Validate CloufGormation on PR
+name: Validate CloudFormation on PR
 
 on:
   pull_request:
     paths:
       - 'cloudformation/**'
 
-permission:
+permissions:
   pull-requests: write
   contents: read
 
