@@ -2,24 +2,26 @@ AWSTemplateFormatVersion: '2010-09-09'
 Description: 'S3 Bucket for our CICD PR'
 
 Parameters:
-  Enviroment: 
+  Environment: 
     Type: String
     Default: test
-    Allowed Values: 
+    AllowedValues: 
       - test
       - staging
       - production
 
 Resources:
-  MyS3Bucket:
+  S3Bucket:
     Type: 'AWS::S3::Bucket'
     Properties:
-      BucketName: !Sub '${AWS::Stack-name}-${Environment}-bucket'
+      BucketName: !Sub 'cea-${AWS::StackName}-${Environment}-bucket'
       Tags:
         - Key: Environment
           Value: !Ref Environment
+        - Key: Project
+          Value: GitHubActionsTesting
 
-  Outputs:
-    BucketName:
-      Description: 'Name of creayred s3 bucket'
-      Value: !Ref MyS3bucket
+Outputs:
+  BucketName:
+    Description: 'Name of created s3 bucket'
+    Value: !Ref S3Bucket
