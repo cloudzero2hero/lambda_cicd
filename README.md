@@ -13,7 +13,7 @@ This is looped back to the start of the development process for continuous impro
 
 ### This process has 2 workflows:
 
-1. GitHub Actions to trigger on a push that creates a Lambda package to deploy on AWS & updates.
+###1. GitHub Actions to trigger on a push that creates a Lambda package to deploy on AWS & updates.
 
 <img width="1624" height="969" alt="image" src="https://github.com/user-attachments/assets/c35fd79c-1dfa-4aa0-be76-0e02ecc1dd92" />
 
@@ -23,7 +23,7 @@ This is looped back to the start of the development process for continuous impro
 - GitHub Actions uses runner to checkout the code from repo, sets up Python environment
 - Configures credentials & packages up Lambda to deploy to AWS
 
-2. GitHub Actions to trigger a pull event that uses a CloudFormation yaml file to deploy an S3 bucket in AWS.
+###2. GitHub Actions to trigger a pull event that uses a CloudFormation yaml file to deploy an S3 bucket in AWS.
 
 <img width="1580" height="995" alt="CICD Pull Architecture enhanced" src="https://github.com/user-attachments/assets/448dc38a-7f25-46be-8324-1ddbfc57ac6b" />
 
@@ -46,8 +46,8 @@ This involved creating a workflow to reduce the amount of manual intervention re
 Automating the clean up of resources in AWS also meant no ongoing running costs once the pull request was merged.
 
 ### Testing resources
-To test each workflow was running correctly I used a CloudFormation template:
-Workflow 1 - that when triggered created Lambda function, updating the code within the file, the updated code being viewable within AWS.
+To test each workflow was running correctly I used a CloudFormation template: <br />
+Workflow 1 - that when triggered created Lambda function, updating the code within the file, the updated code being viewable within AWS. <br />
 Workflow 2 - that when successfully validated would deploy the stack and create an S3 bucket in AWS.
 
 ## What broke and how I fixed it
