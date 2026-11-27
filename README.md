@@ -5,15 +5,15 @@
 ## The Problem
 
 ### Legacy software is stuck in the past working for months to create the best version of an app only to eventually deploy it and realise many improvements are required.
-This process can be improved by using DevOps & CICD, Uuilising small continuous iterations & automation. <br />
-The results is you get a faster time to market with a more complete product for the end user through a combination of improved reliability, increased scalability & collaboration within the team. <br />
-This is looped back to the start of the development process for continuous improvement, continuous delivery, continuous deployment.
+### This process can be improved by using DevOps & CICD, Uuilising small continuous iterations & automation. <br />
+### The results is you get a faster time to market with a more complete product for the end user through a combination of improved reliability, increased scalability & collaboration within the team. <br />
+### This is looped back to the start of the development process for continuous improvement, continuous delivery, continuous deployment.
 
 ## What I Built
 
 ### This process has 2 workflows:
 
-###1. GitHub Actions to trigger on a push that creates a Lambda package to deploy on AWS & updates.
+1. GitHub Actions to trigger on a push that creates a Lambda package to deploy on AWS & updates.
 
 <img width="1624" height="969" alt="image" src="https://github.com/user-attachments/assets/c35fd79c-1dfa-4aa0-be76-0e02ecc1dd92" />
 
@@ -23,7 +23,7 @@ This is looped back to the start of the development process for continuous impro
 - GitHub Actions uses runner to checkout the code from repo, sets up Python environment
 - Configures credentials & packages up Lambda to deploy to AWS
 
-###2. GitHub Actions to trigger a pull event that uses a CloudFormation yaml file to deploy an S3 bucket in AWS.
+2. GitHub Actions to trigger a pull event that uses a CloudFormation yaml file to deploy an S3 bucket in AWS.
 
 <img width="1580" height="995" alt="CICD Pull Architecture enhanced" src="https://github.com/user-attachments/assets/448dc38a-7f25-46be-8324-1ddbfc57ac6b" />
 
