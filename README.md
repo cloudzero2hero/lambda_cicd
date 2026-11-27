@@ -5,8 +5,8 @@
 ## The Problem
 
 ### Legacy software is stuck in the past working for months to create the best version of an app only to eventually deploy it and realise many improvements are required.
-This process can be improved by using DevOps & CICD, Uuilising small continuous iterations & automation.
-The results is you get a faster time to market with a more complete product for the end user through a combination of improved reliability, increased scalability & collaboration within the team. 
+This process can be improved by using DevOps & CICD, Uuilising small continuous iterations & automation. <br />
+The results is you get a faster time to market with a more complete product for the end user through a combination of improved reliability, increased scalability & collaboration within the team. <br />
 This is looped back to the start of the development process for continuous improvement, continuous delivery, continuous deployment.
 
 ## What I Built
